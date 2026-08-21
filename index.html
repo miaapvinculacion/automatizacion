@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatización de Titulación - UTPL</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    
+    <!-- Barra Superior -->
+    <header class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-title">Gestión de Vinculación y Titulación</div>
+            <div class="badge">Ingeniería en TI</div>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal (Layout de 2 columnas) -->
+    <div class="dashboard-layout">
+        
+        <!-- Columna Izquierda: Menú Lateral -->
+        <aside class="sidebar">
+            <div class="sidebar-header">MENÚ DE NAVEGACIÓN</div>
+            <ul class="sidebar-menu">
+                <li><a href="#sec-cronograma">Matriz de Cronograma</a></li>
+                <li><a href="#sec-convenios">Carga para Convenios</a></li>
+                <li><a href="#sec-encuestas">Encuestas de Satisfacción</a></li>
+                <li><a href="#sec-productos">Registro de Productos TT</a></li>
+            </ul>
+        </aside>
+
+        <!-- Columna Derecha: Contenido y Botones -->
+        <main class="main-content">
+            
+            <div class="dashboard-header">
+                <h2>Panel de Procesos Automatizados</h2>
+                <p>Seleccione un módulo de la automatización para acceder a los formularios. El sistema opera respaldado por IA y n8n.</p>
+            </div>
+
+            <!-- Bloque: Matriz de Cronograma -->
+            <section id="sec-cronograma" class="content-block">
+                <div class="block-header">MATRIZ DE CRONOGRAMA</div>
+                <div class="grid-container">
+                    <a href="https://adrian07.app.n8n.cloud/form/fd6dac6d-4274-48ee-b57a-2b72e6df698b" target="_blank" class="action-card card-blue">
+                        <span class="card-title">Matriz de Cronograma</span>
+                        <span class="tag tag-blue">Procesamiento PDF (Anexo 2)</span>
+                        <p class="card-description">Recepción de matriz en PDF, extracción de hitos y actividades mediante IA (Gemini) y tabulación estructurada automática en Google Sheets.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Bloque: Carga Estudiantes -->
+            <section id="sec-convenios" class="content-block">
+                <div class="block-header">CARGA DE ESTUDIANTES PARA CONVENIOS</div>
+                <div class="grid-container">
+                    <a href="https://adrian07.app.n8n.cloud/form/3ea32a94-b90d-41b5-8489-8d92a98c6be6" target="_blank" class="action-card card-yellow">
+                        <span class="card-title">Periodo Abril - Agosto</span>
+                        <span class="tag tag-yellow">Archivo XLSX</span>
+                        <p class="card-description">Ingesta de listados de estudiantes del periodo Abril-Agosto. Conversión dinámica, extracción de participantes y ordenamiento alfabético en Sheets.</p>
+                    </a>
+                    <a href="https://adrian07.app.n8n.cloud/form/b87f8eee-db09-4846-be64-c4d3f95aea12" target="_blank" class="action-card card-yellow">
+                        <span class="card-title">Periodo Octubre - Febrero</span>
+                        <span class="tag tag-yellow">Archivo XLSX</span>
+                        <p class="card-description">Ingesta de listados de estudiantes del periodo Octubre-Febrero. Conversión dinámica, extracción de participantes y actualización del archivo maestro.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Bloque: Encuesta de Satisfacción -->
+            <section id="sec-encuestas" class="content-block">
+                <div class="block-header">ENCUESTAS DE SATISFACCIÓN</div>
+                <div class="grid-container">
+                    <a href="https://adrian07.app.n8n.cloud/form/f7b2dbec-1fdd-488d-8265-5fdf6152e920" target="_blank" class="action-card card-green">
+                        <span class="card-title">Encuesta a Beneficiarios</span>
+                        <span class="tag tag-green">Programas de Posgrado</span>
+                        <p class="card-description">Distribución masiva automatizada de enlaces de encuestas de satisfacción dirigidas a beneficiarios de las actividades de vinculación institucional.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Bloque: Registro de Productos TT -->
+            <section id="sec-productos" class="content-block">
+                <div class="block-header">REGISTRO DE PRODUCTOS VINCULADOS AL TT</div>
+                <div class="grid-container">
+                    <a href="https://adrian07.app.n8n.cloud/form/2913b75f-546a-44cc-b0cb-1899f5f88e70" target="_blank" class="action-card card-purple">
+                        <span class="card-title">Subir Cohortes y Base</span>
+                        <span class="tag tag-purple">Ingreso Excel Maestro</span>
+                        <p class="card-description">Módulo de registro maestro de cohortes. Valida duplicados, genera IDs continuos y establece el estado inicial y banderas de control de cada estudiante.</p>
+                    </a>
+                    <a href="https://adrian07.app.n8n.cloud/form/6087fae8-b6a9-4994-8010-1e3c93e1d976" target="_blank" class="action-card card-red">
+                        <span class="card-title">Registro de SW y Patentes</span>
+                        <span class="tag tag-red">Formulario Directores</span>
+                        <p class="card-description">Formulario de captura de resultados (Software, Patente, Premio). Actualiza las tablas maestras, cambia el estado a completado y envía confirmación por Gmail.</p>
+                    </a>
+                    <a href="#" onclick="alert('Monitoreo automatizado: Este proceso se ejecuta en segundo plano (CRON) cada lunes a las 9:00 AM para buscar estudiantes sin registro.'); return false;" class="action-card card-teal">
+                        <span class="card-title">Monitoreo y Seguimiento</span>
+                        <span class="tag tag-teal">Revisión Automática</span>
+                        <p class="card-description">Ejecución programada que audita semanalmente la base de datos de estudiantes y emite notificaciones preventivas a quienes no han llenado sus datos.</p>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

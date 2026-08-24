@@ -1,117 +1,266 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatización de Titulación - UTPL</title>
-    <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Institucional de Gestión y Automatización de Vinculación | UTPL - MIAA</title>
+  
+  <!-- Tipografía Inter (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    
-    <!-- Barra Superior -->
-    <header class="top-bar">
-        <div class="top-bar-content">
-            <div class="top-bar-title">Gestión de Vinculación y Titulación</div>
-            <div class="badge">Ingeniería en TI</div>
-        </div>
-    </header>
 
-    <!-- Contenedor Principal (Layout de 2 columnas) -->
-    <div class="dashboard-layout">
-        
-        <!-- Columna Izquierda: Menú Lateral -->
-        <aside class="sidebar">
-            <div class="sidebar-header">MENÚ DE NAVEGACIÓN</div>
-            <ul class="sidebar-menu">
-                <li><a href="#sec-cronograma">Matriz de Cronograma</a></li>
-                <li><a href="#sec-convenios">Carga para Convenios</a></li>
-                <li><a href="#sec-encuestas">Encuestas de Satisfacción</a></li>
-                <li><a href="#sec-productos">Registro de Productos TT</a></li>
-            </ul>
-        </aside>
-
-        <!-- Columna Derecha: Contenido y Botones -->
-        <main class="main-content">
-            
-            <div class="dashboard-header">
-                <h2>Panel de Procesos Automatizados</h2>
-                <p>Seleccione un módulo de la automatización para acceder a los formularios. El sistema opera respaldado por IA y n8n.</p>
-            </div>
-
-            <!-- Bloque: Matriz de Cronograma -->
-            <section id="sec-cronograma" class="content-block">
-                <div class="block-header">MATRIZ DE CRONOGRAMA</div>
-                <div class="grid-container">
-                    <a href="https://adrian07.app.n8n.cloud/form/fd6dac6d-4274-48ee-b57a-2b72e6df698b" target="_blank" class="action-card card-blue">
-                        <span class="card-title">Matriz de Cronograma</span>
-                        <span class="tag tag-blue">Procesamiento PDF (Anexo 2)</span>
-                        <p class="card-description">Recepción de matriz en PDF, extracción de hitos y actividades mediante IA (Gemini) y tabulación estructurada automática en Google Sheets.</p>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Bloque: Carga Estudiantes -->
-            <section id="sec-convenios" class="content-block">
-                <div class="block-header">CARGA DE ESTUDIANTES PARA CONVENIOS</div>
-                <div class="grid-container">
-                    <a href="https://adrian07.app.n8n.cloud/form/3ea32a94-b90d-41b5-8489-8d92a98c6be6" target="_blank" class="action-card card-yellow">
-                        <span class="card-title">Periodo Abril - Agosto</span>
-                        <span class="tag tag-yellow">Archivo XLSX</span>
-                        <p class="card-description">Ingesta de listados de estudiantes del periodo Abril-Agosto. Conversión dinámica, extracción de participantes y ordenamiento alfabético en Sheets.</p>
-                    </a>
-                    <a href="https://adrian07.app.n8n.cloud/form/b87f8eee-db09-4846-be64-c4d3f95aea12" target="_blank" class="action-card card-yellow">
-                        <span class="card-title">Periodo Octubre - Febrero</span>
-                        <span class="tag tag-yellow">Archivo XLSX</span>
-                        <p class="card-description">Ingesta de listados de estudiantes del periodo Octubre-Febrero. Conversión dinámica, extracción de participantes y actualización del archivo maestro.</p>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Bloque: Encuesta de Satisfacción -->
-            <section id="sec-encuestas" class="content-block">
-                <div class="block-header">ENCUESTAS DE SATISFACCIÓN</div>
-                <div class="grid-container">
-                    <a href="https://adrian07.app.n8n.cloud/form/f7b2dbec-1fdd-488d-8265-5fdf6152e920" target="_blank" class="action-card card-green">
-                        <span class="card-title">Encuesta a Beneficiarios</span>
-                        <span class="tag tag-green">Programas de Posgrado</span>
-                        <p class="card-description">Distribución masiva automatizada de enlaces de encuestas de satisfacción dirigidas a beneficiarios de las actividades de vinculación institucional.</p>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Bloque: Registro de Productos TT -->
-            <section id="sec-productos" class="content-block">
-                <div class="block-header">REGISTRO DE PRODUCTOS VINCULADOS AL TT</div>
-                <div class="grid-container">
-                    <a href="https://adrian07.app.n8n.cloud/form/2913b75f-546a-44cc-b0cb-1899f5f88e70" target="_blank" class="action-card card-purple">
-                        <span class="card-title">Subir Cohortes y Base</span>
-                        <span class="tag tag-purple">Ingreso Excel Maestro</span>
-                        <p class="card-description">Módulo de registro maestro de cohortes. Valida duplicados, genera IDs continuos y establece el estado inicial y banderas de control de cada estudiante.</p>
-                    </a>
-                    
-                    <a href="https://adrian07.app.n8n.cloud/form/6087fae8-b6a9-4994-8010-1e3c93e1d976" target="_blank" class="action-card card-red">
-                        <span class="card-title">Registro de SW y Patentes</span>
-                        <span class="tag tag-red">Formulario Directores</span>
-                        <p class="card-description">Formulario de captura de resultados (Software, Patente, Premio). Actualiza las tablas maestras, cambia el estado a completado y envía confirmación por Gmail.</p>
-                    </a>
-
-                    <!-- NUEVO ENLACE AÑADIDO: Artículos y Capítulos de Libro -->
-                    <a href="https://adrian07.app.n8n.cloud/form/2e9ca16a-506f-410c-9e6d-f7cefa5f2e00" target="_blank" class="action-card card-blue">
-                        <span class="card-title">Registro Artículos - Cap.Libro</span>
-                        <span class="tag tag-blue">Formulario Directores</span>
-                        <p class="card-description">Formulario de captura de producción científica (Artículos, Capítulos de libro). Actualiza las tablas maestras, cambia el estado a completado y envía confirmación por Gmail.</p>
-                    </a>
-
-                    <a href="#" onclick="alert('Monitoreo automatizado: Este proceso se ejecuta en segundo plano (CRON) cada lunes a las 9:00 AM para buscar estudiantes sin registro.'); return false;" class="action-card card-teal">
-                        <span class="card-title">Monitoreo y Seguimiento</span>
-                        <span class="tag tag-teal">Revisión Automática</span>
-                        <p class="card-description">Ejecución programada que audita semanalmente la base de datos de estudiantes y emite notificaciones preventivas a quienes no han llenado sus datos.</p>
-                    </a>
-                </div>
-            </section>
-
-        </main>
+  <!-- ENCABEZADO INSTITUCIONAL -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="header-branding">
+        <span class="institution-tag">Universidad Técnica Particular de Loja | Programas de Posgrado</span>
+        <h1 class="header-title">Sistema de Gestión y Monitoreo de Vinculación con la Sociedad</h1>
+        <p class="header-subtitle">Maestría en Inteligencia Artificial Aplicada (MIAA) — Panel de Control Administrativo</p>
+      </div>
     </div>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <main class="main-content">
+    
+    <!-- BANNER INFORMATIVO -->
+    <section class="admin-banner">
+      <div class="admin-banner-text">
+        <h2>Panel de Despacho y Monitoreo de Procesos</h2>
+        <p>
+          Portal centralizado para la administración de vinculación. Ejecute los módulos siguiendo el orden cronológico establecido para asegurar la consistencia, deduplicación e integridad de las bases de datos maestras.
+        </p>
+      </div>
+      <div class="admin-badge-status">
+        <span class="status-indicator"></span> Entorno Operativo: Producción
+      </div>
+    </section>
+
+    <!-- GRID DE PASOS SECUENCIALES -->
+    <div class="workflow-grid">
+      
+      <!-- PASO 1: DEFINICIÓN DEL PROYECTO -->
+      <section class="step-section">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <div class="step-title-group">
+            <h3 class="step-title">Paso 1: Definición de Actividades del Proyecto</h3>
+            <p class="step-desc">Planificación anual del proyecto de vinculación, cronograma institucional y estructuración de carpetas de verificación.</p>
+          </div>
+        </div>
+
+        <div class="cards-container">
+          <article class="card">
+            <div class="card-top">
+              <span class="badge badge-primary">Planificación Anual</span>
+              <h4 class="card-title">Definición de Actividades del Proyecto</h4>
+              <p class="card-description">
+                Procesamiento y estructuración del cronograma de actividades, objetivos específicos, presupuesto institucional y medios de verificación en Google Drive.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="https://adrian07.app.n8n.cloud/form/fd6dac6d-4274-48ee-b57a-2b72e6df698b" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-primary">
+                Cargar Planificación del Proyecto
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PASO 2: GESTIÓN Y REGISTRO DE COHORTES -->
+      <section class="step-section">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <div class="step-title-group">
+            <h3 class="step-title">Paso 2: Gestión y Registro de Nómina por Cohorte</h3>
+            <p class="step-desc">Administración integral de estudiantes y directores: ingesta maestra, consulta de nóminas activas y depuración de registros.</p>
+          </div>
+        </div>
+
+        <div class="cards-container">
+          <!-- Carga de Nómina -->
+          <article class="card">
+            <div class="card-top">
+              <span class="badge badge-accent">Ingesta Base Maestra</span>
+              <h4 class="card-title">Subir Nómina de Cohorte</h4>
+              <p class="card-description">
+                Carga de estudiantes, números de cédula, correos, directores y temas de titulación con validación de duplicados y asignación de ID correlativo.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="https://adrian07.app.n8n.cloud/form/2913b75f-546a-44cc-b0cb-1899f5f88e70" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-primary">
+                Cargar Archivo de Cohorte
+              </a>
+            </div>
+          </article>
+
+          <!-- Consultar Nómina -->
+          <article class="card">
+            <div class="card-top">
+              <span class="badge badge-info">Auditoría y Monitoreo</span>
+              <h4 class="card-title">Consultar Datos de Cohorte</h4>
+              <p class="card-description">
+                Visualización detallada en tabla de la nómina de estudiantes registrados por cohorte, directores asignados y el estado de entrega de sus productos.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="https://adrian07.app.n8n.cloud/form/7bbe050c-3d02-4523-aea8-ff5b27c4796c" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-primary">
+                Consultar Nómina Registrada
+              </a>
+            </div>
+          </article>
+
+          <!-- Eliminar Cohorte -->
+          <article class="card">
+            <div class="card-top">
+              <span class="badge badge-primary">Depuración de Base de Datos</span>
+              <h4 class="card-title">Eliminar Datos de Cohorte</h4>
+              <p class="card-description">
+                Módulo para verificar la nómina registrada de una cohorte y proceder con su eliminación definitiva de la base de datos maestra si es requerido.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="https://adrian07.app.n8n.cloud/form/513adb01-aada-4441-89c7-af2ff4745fac" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-secondary">
+                Gestionar y Eliminar Cohorte
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PASO 3: ASIGNACIÓN POR PERIODO ACADÉMICO Y CONVENIOS -->
+      <section class="step-section">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <div class="step-title-group">
+            <h3 class="step-title">Paso 3: Asignación por Periodo Académico y Convenios</h3>
+            <p class="step-desc">Distribución de estudiantes según el ciclo semestral correspondiente (abril–agosto u octubre–febrero) para la gestión formal de convenios.</p>
+          </div>
+        </div>
+
+        <div class="cards-container">
+          <article class="card">
+            <div class="card-top">
+              <span class="badge badge-primary">Gestión Semestral</span>
+              <h4 class="card-title">Distribución de Estudiantes en Convenios</h4>
+              <p class="card-description">
+                Segmentación interactiva por cohorte y semestre académico para la generación automática del libro oficial de convenios y prácticas de vinculación.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="https://adrian07.app.n8n.cloud/form/3ea32a94-b90d-41b5-8489-8d92a98c6be6" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-primary">
+                Gestionar Estudiantes por Periodo
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PASO 4: SOLICITUD Y MONITOREO DE PRODUCTOS DE TITULACIÓN A DIRECTORES -->
+      <section class="step-section">
+        <div class="step-header">
+          <div class="step-number">4</div>
+          <div class="step-title-group">
+            <h3 class="step-title">Paso 4: Solicitud y Monitoreo de Productos de Titulación</h3>
+            <p class="step-desc">Despacho de notificaciones a directores para el reporte de resultados alcanzados en los Trabajos de Titulación, con control de recordatorios automáticos.</p>
+          </div>
+        </div>
+
+        <div class="cards-container">
+          <!-- Software, Patentes y Premios -->
+          <article class="card">
+            <div class="card-top">
+              <span class="badge badge-info">Desarrollo Tecnológico</span>
+              <h4 class="card-title">Software, Patentes, Premios o Reconocimientos</h4>
+              <p class="card-description">
+                Envío de solicitudes personalizadas a docentes directores para recopilar desarrollos de software, registros SENADI, patentes y reconocimientos obtenidos.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="https://adrian07.app.n8n.cloud/form/9e75e79b-7d39-4c2b-9bc6-a13880ea7cab" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-secondary">
+                Despachar Solicitud (SW / Patentes)
+              </a>
+            </div>
+          </article>
+
+          <!-- Producción Científica -->
+          <article class="card">
+            <div class="card-top">
+              <span class="badge badge-info">Producción Científica</span>
+              <h4 class="card-title">Congresos, Revistas o Capítulos de Libro</h4>
+              <p class="card-description">
+                Envío de solicitudes a directores para el registro de artículos indexados, ponencias y capítulos derivados de los trabajos de titulación.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="https://adrian07.app.n8n.cloud/form/644019cd-6e36-45ba-ad97-0c2418ec7be9" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-secondary">
+                Despachar Solicitud (Publicaciones)
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PASO 5: EVALUACIÓN DE BENEFICIARIOS -->
+      <section class="step-section">
+        <div class="step-header">
+          <div class="step-number">5</div>
+          <div class="step-title-group">
+            <h3 class="step-title">Paso 5: Evaluación de Beneficiarios Externos</h3>
+            <p class="step-desc">Distribución de instrumentos institucionales para medir el nivel de satisfacción e impacto en los beneficiarios del sector externo.</p>
+          </div>
+        </div>
+
+        <div class="cards-container">
+          <article class="card">
+            <div class="card-top">
+              <span class="badge badge-success">Evaluación Externa</span>
+              <h4 class="card-title">Encuesta de Satisfacción a Beneficiarios</h4>
+              <p class="card-description">
+                Carga de la nómina de participantes externos y distribución del cuestionario oficial de vinculación con emisión de informe consolidado de entrega.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="https://adrian07.app.n8n.cloud/form/f7b2dbec-1fdd-488d-8265-5fdf6152e920" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-primary">
+                Distribuir Encuesta de Satisfacción
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
 
 </body>
 </html>

@@ -1,260 +1,417 @@
-/* Reseteo y Tipografía Global */
+/* ==========================================================================
+   ESTILOS INSTITUCIONALES - SISTEMA DE GESTIÓN DE VINCULACIÓN (UTPL - MIAA)
+   Paleta institucional: Azul Marino (#003366), Oro (#F1C40F), Slate
+   ========================================================================== */
+
 :root {
-    --primary-color: #003366; 
-    --secondary-color: #F1C40F; 
-    --bg-color: #F4F7F9; /* Fondo principal más suave y moderno */
-    --text-main: #333333;
-    --text-light: #666666;
-    --white: #FFFFFF;
-    
-    /* Colores de acento para las tarjetas */
-    --color-blue: #3498db;
-    --color-yellow: #f39c12;
-    --color-green: #2ecc71;
-    --color-purple: #9b59b6;
-    --color-red: #e74c3c;
-    --color-teal: #1abc9c;
+  --primary: #003366;
+  --primary-dark: #002244;
+  --primary-light: #004d99;
+  --accent: #F1C40F;
+  --accent-dark: #d4ac0d;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --bg-base: #f8fafc;
+  --bg-card: #ffffff;
+  --border-color: #e2e8f0;
+  
+  --success: #166534;
+  --success-bg: #dcfce7;
+  --info: #0369a1;
+  --info-bg: #e0f2fe;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --radius: 8px;
+  --radius-sm: 4px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
+/* Reseteo y Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-main);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Barra Superior */
-.top-bar {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 15px 30px;
-    border-bottom: 4px solid var(--secondary-color);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.main-header {
+  background-color: var(--primary);
+  border-bottom: 4px solid var(--accent);
+  color: #ffffff;
+  padding: 1.75rem 1rem;
+  box-shadow: var(--shadow-md);
 }
 
-.top-bar-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.top-bar-title {
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
+.header-branding {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.institution-tag {
+  font-size: 0.75rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.header-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.header-subtitle {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   MAIN CONTENT & BANNER
+   ========================================================================== */
+.main-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  flex: 1;
+  width: 100%;
+}
+
+.admin-banner {
+  background-color: #ffffff;
+  border-left: 5px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.75rem;
+  margin-bottom: 2.25rem;
+  box-shadow: var(--shadow-sm);
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-banner-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.admin-banner-text h2 {
+  font-size: 1.15rem;
+  color: var(--primary);
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+.admin-banner-text p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.admin-badge-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--success-bg);
+  color: var(--success);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid #bbf7d0;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   WORKFLOW GRID & STEPS
+   ========================================================================== */
+.workflow-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.step-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.step-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 2px solid var(--bg-base);
+  padding-bottom: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.step-number {
+  background-color: var(--primary);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 51, 102, 0.25);
+}
+
+.step-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.step-title {
+  font-size: 1.15rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.step-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   CARDS
+   ========================================================================== */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.35rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-light);
+}
+
+.card-top {
+  margin-bottom: 1.5rem;
 }
 
 .badge {
-    background-color: rgba(255, 255, 255, 0.15);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.25rem 0.55rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
 }
 
-/* Layout Dashboard */
-.dashboard-layout {
-    display: flex;
-    max-width: 1400px;
-    margin: 0 auto;
-    min-height: calc(100vh - 62px);
+.badge-primary {
+  background-color: #e2e8f0;
+  color: var(--primary);
 }
 
-/* Columna Izquierda: Sidebar */
-.sidebar {
-    width: 280px;
-    background-color: var(--white);
-    border-right: 1px solid #E5E7EB;
-    flex-shrink: 0;
-    padding-top: 20px;
+.badge-accent {
+  background-color: #fef9c3;
+  color: #854d0e;
 }
 
-.sidebar-header {
-    padding: 0 25px 15px 25px;
-    font-size: 12px;
-    font-weight: 700;
-    color: #9CA3AF;
-    letter-spacing: 1px;
+.badge-info {
+  background-color: var(--info-bg);
+  color: var(--info);
 }
 
-.sidebar-menu {
-    list-style: none;
-    position: sticky;
-    top: 90px; 
+.badge-success {
+  background-color: var(--success-bg);
+  color: var(--success);
 }
-
-.sidebar-menu li {
-    margin-bottom: 5px;
-    padding: 0 15px;
-}
-
-.sidebar-menu li a {
-    display: block;
-    padding: 12px 15px;
-    color: #4B5563;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.sidebar-menu li a:hover {
-    background-color: #F3F4F6;
-    color: var(--primary-color);
-    transform: translateX(5px);
-}
-
-/* Columna Derecha: Contenido Principal */
-.main-content {
-    flex-grow: 1;
-    padding: 30px 40px;
-}
-
-.dashboard-header {
-    margin-bottom: 40px;
-}
-
-.dashboard-header h2 {
-    font-size: 26px;
-    color: var(--primary-color);
-    margin-bottom: 8px;
-}
-
-.dashboard-header p {
-    color: var(--text-light);
-    font-size: 15px;
-}
-
-/* Bloques de Sección */
-.content-block {
-    margin-bottom: 45px;
-    scroll-margin-top: 80px; /* Evita que el menú superior tape el título al hacer clic */
-}
-
-.block-header {
-    background-color: #E5E7EB;
-    color: #374151;
-    padding: 10px 18px;
-    font-size: 13px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    letter-spacing: 0.5px;
-}
-
-/* Cuadrícula de Tarjetas */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-/* Tarjetas Estilizadas (Acciones) */
-.action-card {
-    background-color: var(--white);
-    border-radius: 10px;
-    padding: 25px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-    border: 1px solid #F3F4F6;
-    border-top: 4px solid #D1D5DB; /* Color por defecto */
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.action-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-}
-
-/* Colores de Borde Superior para cada tarjeta */
-.card-blue { border-top-color: var(--color-blue); }
-.card-yellow { border-top-color: var(--color-yellow); }
-.card-green { border-top-color: var(--color-green); }
-.card-purple { border-top-color: var(--color-purple); }
-.card-red { border-top-color: var(--color-red); }
-.card-teal { border-top-color: var(--color-teal); }
 
 .card-title {
-    font-size: 16px;
-    font-weight: 700;
-    color: #1F2937;
-    margin-bottom: 12px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.6rem;
+  line-height: 1.35;
 }
-
-/* Etiquetas (Tags estilo píldora) */
-.tag {
-    display: inline-block;
-    font-size: 11px;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-/* Colores de las píldoras */
-.tag-blue { background-color: #E1EFFE; color: #1E40AF; }
-.tag-yellow { background-color: #FEF3C7; color: #92400E; }
-.tag-green { background-color: #DEF7EC; color: #03543F; }
-.tag-purple { background-color: #EDEBFE; color: #5521B5; }
-.tag-red { background-color: #FDE8E8; color: #9B1C1C; }
-.tag-teal { background-color: #E6FFFA; color: #047481; }
 
 .card-description {
-    font-size: 13px;
-    color: #6B7280;
-    line-height: 1.6;
-    margin-top: auto; /* Empuja la descripción hacia abajo si hay espacio */
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.55;
 }
 
-/* Responsividad */
-@media (max-width: 900px) {
-    .dashboard-layout {
-        flex-direction: column;
-    }
-    
-    .sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #E5E7EB;
-        padding-bottom: 15px;
-    }
-    
-    .sidebar-menu {
-        position: static;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .sidebar-menu li {
-        flex: 1 1 auto;
-        text-align: center;
-    }
-    
-    .sidebar-menu li a:hover {
-        transform: translateY(-2px);
-    }
-    
-    .main-content {
-        padding: 25px 20px;
-    }
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+.card-action {
+  margin-top: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.99);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary-dark);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  box-shadow: 0 3px 6px rgba(0, 51, 102, 0.25);
+}
+
+.btn-secondary {
+  background-color: #334155;
+  color: #ffffff;
+  border: 1px solid #1e293b;
+}
+
+.btn-secondary:hover {
+  background-color: #475569;
+  box-shadow: 0 3px 6px rgba(51, 65, 85, 0.25);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.main-footer {
+  background-color: var(--primary-dark);
+  color: #94a3b8;
+  font-size: 0.825rem;
+  padding: 2.25rem 1rem;
+  margin-top: 3.5rem;
+  border-top: 1px solid var(--primary);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.footer-org {
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.footer-program {
+  color: #cbd5e1;
+  font-size: 0.85rem;
+}
+
+.footer-meta {
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+.footer-tech {
+  border-top: 1px solid #1e3a5f;
+  padding-top: 0.85rem;
+  font-size: 0.775rem;
+  color: #64748b;
+}
+
+.footer-tech strong {
+  color: #cbd5e1;
+}
+
+/* ==========================================================================
+   RESPONSIVIDAD (Media Queries)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 1.25rem;
+  }
+  
+  .header-subtitle {
+    font-size: 0.825rem;
+  }
+
+  .step-section {
+    padding: 1.25rem;
+  }
+
+  .step-header {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

@@ -29,19 +29,6 @@
   <!-- CONTENEDOR PRINCIPAL -->
   <main class="main-content">
     
-    <!-- BANNER INFORMATIVO -->
-    <section class="admin-banner">
-      <div class="admin-banner-text">
-        <h2>Panel de Despacho y Monitoreo de Procesos</h2>
-        <p>
-          Portal centralizado para la administración de vinculación. Ejecute los módulos siguiendo el orden cronológico establecido para asegurar la consistencia, deduplicación e integridad de las bases de datos maestras.
-        </p>
-      </div>
-      <div class="admin-badge-status">
-        <span class="status-indicator"></span> Entorno Operativo: Producción
-      </div>
-    </section>
-
     <!-- GRID DE PASOS SECUENCIALES -->
     <div class="workflow-grid">
       
@@ -51,17 +38,17 @@
           <div class="step-number">1</div>
           <div class="step-title-group">
             <h3 class="step-title">Paso 1: Definición de Actividades del Proyecto</h3>
-            <p class="step-desc">Planificación anual del proyecto de vinculación, cronograma institucional y estructuración de carpetas de verificación.</p>
+            <p class="step-desc">Planificación del proyecto de vinculación, cronograma institucional.</p>
           </div>
         </div>
 
         <div class="cards-container">
           <article class="card">
             <div class="card-top">
-              <span class="badge badge-primary">Planificación Anual</span>
+              <span class="badge badge-primary">Planificación</span>
               <h4 class="card-title">Definición de Actividades del Proyecto</h4>
               <p class="card-description">
-                Procesamiento y estructuración del cronograma de actividades, objetivos específicos, presupuesto institucional y medios de verificación en Google Drive.
+                Procesamiento y estructuración del cronograma de actividades, objetivos específicos, presupuesto institucional y actividades.
               </p>
             </div>
             <div class="card-action">
@@ -82,7 +69,7 @@
           <div class="step-number">2</div>
           <div class="step-title-group">
             <h3 class="step-title">Paso 2: Gestión y Registro de Nómina por Cohorte</h3>
-            <p class="step-desc">Administración integral de estudiantes y directores: ingesta maestra, consulta de nóminas activas y depuración de registros.</p>
+            <p class="step-desc">Administración de estudiantes y directores: carga de base de datos, consulta de nóminas activas y depuración de registros.</p>
           </div>
         </div>
 
@@ -90,7 +77,7 @@
           <!-- Carga de Nómina -->
           <article class="card">
             <div class="card-top">
-              <span class="badge badge-accent">Ingesta Base Maestra</span>
+              <span class="badge badge-accent">Carga de Base Maestra</span>
               <h4 class="card-title">Subir Nómina de Cohorte</h4>
               <p class="card-description">
                 Carga de estudiantes, números de cédula, correos, directores y temas de titulación con validación de duplicados y asignación de ID correlativo.
@@ -109,7 +96,7 @@
           <!-- Consultar Nómina -->
           <article class="card">
             <div class="card-top">
-              <span class="badge badge-info">Auditoría y Monitoreo</span>
+              <span class="badge badge-info">Monitoreo</span>
               <h4 class="card-title">Consultar Datos de Cohorte</h4>
               <p class="card-description">
                 Visualización detallada en tabla de la nómina de estudiantes registrados por cohorte, directores asignados y el estado de entrega de sus productos.
@@ -162,8 +149,7 @@
               <span class="badge badge-primary">Gestión Semestral</span>
               <h4 class="card-title">Distribución de Estudiantes en Convenios</h4>
               <p class="card-description">
-                Segmentación interactiva por cohorte y semestre académico para la generación automática del libro oficial de convenios y prácticas de vinculación.
-              </p>
+                Segmentación interactiva por cohorte y semestre académico para la generación automática del archivo [Nro. Estudiantes e información convenios].
             </div>
             <div class="card-action">
               <a href="https://adrian07.app.n8n.cloud/form/3ea32a94-b90d-41b5-8489-8d92a98c6be6" 
@@ -177,13 +163,13 @@
         </div>
       </section>
 
-      <!-- PASO 4: SOLICITUD Y MONITOREO DE PRODUCTOS DE TITULACIÓN A DIRECTORES -->
+      <!-- PASO 4: SOLICITUD Y MONITOREO DE PRODUCTOS DE TITULACIÓN -->
       <section class="step-section">
         <div class="step-header">
           <div class="step-number">4</div>
           <div class="step-title-group">
             <h3 class="step-title">Paso 4: Solicitud y Monitoreo de Productos de Titulación</h3>
-            <p class="step-desc">Despacho de notificaciones a directores para el reporte de resultados alcanzados en los Trabajos de Titulación, con control de recordatorios automáticos.</p>
+            <p class="step-desc">Envío de notificaciones a directores para el reporte de resultados alcanzados en los Trabajos de Titulación, con control de recordatorios automáticos.</p>
           </div>
         </div>
 
@@ -194,7 +180,7 @@
               <span class="badge badge-info">Desarrollo Tecnológico</span>
               <h4 class="card-title">Software, Patentes, Premios o Reconocimientos</h4>
               <p class="card-description">
-                Envío de solicitudes personalizadas a docentes directores para recopilar desarrollos de software, registros SENADI, patentes y reconocimientos obtenidos.
+                Envío de solicitudes personalizadas a docentes directores para para el registro de los producto vinculados al TT de software, patente, premio o reconocimiento.
               </p>
             </div>
             <div class="card-action">
@@ -202,7 +188,7 @@
                  target="_blank" 
                  rel="noopener noreferrer" 
                  class="btn btn-secondary">
-                Despachar Solicitud (SW / Patentes)
+                Enviar Solicitud (SW / Patentes)
               </a>
             </div>
           </article>
@@ -213,7 +199,7 @@
               <span class="badge badge-info">Producción Científica</span>
               <h4 class="card-title">Congresos, Revistas o Capítulos de Libro</h4>
               <p class="card-description">
-                Envío de solicitudes a directores para el registro de artículos indexados, ponencias y capítulos derivados de los trabajos de titulación.
+                Envío de solicitudes a directores para el registro de los producto vinculados al TT de congreso, revista o capítulo de libro.
               </p>
             </div>
             <div class="card-action">
@@ -221,19 +207,50 @@
                  target="_blank" 
                  rel="noopener noreferrer" 
                  class="btn btn-secondary">
-                Despachar Solicitud (Publicaciones)
+                Enviar Solicitud (Publicaciones)
               </a>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- PASO 5: EVALUACIÓN DE BENEFICIARIOS -->
+      <!-- PASO 5: EVALUACIÓN Y MONITOREO DE COMPETENCIAS -->
       <section class="step-section">
         <div class="step-header">
           <div class="step-number">5</div>
           <div class="step-title-group">
-            <h3 class="step-title">Paso 5: Evaluación de Beneficiarios Externos</h3>
+            <h3 class="step-title">Paso 5: Evaluación y Monitoreo de Competencias</h3>
+            <p class="step-desc">Envío de instrumentos de evaluación curricular por cohorte y semestre (iniciales, intermedias o finales).</p>
+          </div>
+        </div>
+
+        <div class="cards-container">
+          <article class="card">
+            <div class="card-top">
+              <span class="badge badge-primary">Seguimiento</span>
+              <h4 class="card-title">Evaluación de Competencias (Estudiantes / Directores)</h4>
+              <p class="card-description">
+                Configuración del periodo semestral, selección del destinatario y envío masivo del enlace de evaluación de competencias con emisión de informe consolidado la entrega.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="https://adrian07.app.n8n.cloud/form/0d0e9b1a-6d22-4c84-b4e9-bafa22317eb4" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-primary">
+                Enviar Evaluación de Competencias
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PASO 6: EVALUACIÓN DE BENEFICIARIOS -->
+      <section class="step-section">
+        <div class="step-header">
+          <div class="step-number">6</div>
+          <div class="step-title-group">
+            <h3 class="step-title">Paso 6: Evaluación de Beneficiarios Externos</h3>
             <p class="step-desc">Distribución de instrumentos institucionales para medir el nivel de satisfacción e impacto en los beneficiarios del sector externo.</p>
           </div>
         </div>
@@ -244,7 +261,7 @@
               <span class="badge badge-success">Evaluación Externa</span>
               <h4 class="card-title">Encuesta de Satisfacción a Beneficiarios</h4>
               <p class="card-description">
-                Carga de la nómina de participantes externos y distribución del cuestionario oficial de vinculación con emisión de informe consolidado de entrega.
+                Carga de la nómina de participantes externos y distribución del cuestionario de vinculación con emisión de informe consolidado la entrega.
               </p>
             </div>
             <div class="card-action">
@@ -252,7 +269,7 @@
                  target="_blank" 
                  rel="noopener noreferrer" 
                  class="btn btn-primary">
-                Distribuir Encuesta de Satisfacción
+                Enviar Encuesta de Satisfacción
               </a>
             </div>
           </article>
